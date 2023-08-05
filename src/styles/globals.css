@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(----font-montserrat);
+  font-size: 14px;
+}
+
+@base {
+  body {
+    @apply dark:text-white;
+  }
+}
+
+@layer components {
+  .pri-text {
+    @apply dark:text-grey-main text-gray-600;
+  }
+
+  .title {
+    @apply dark:text-white text-gray-600 text-2xl font-semibold;
+  }
+
+  .grid-col3 {
+    @apply grid  grid-cols-1 justify-items-center sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .input_control {
+    @apply bg-p-bg border-p-outline border h-14  w-full;
+  }
+  .radix-popover-content {
+    @apply rounded p-5 w-[260px] bg-white 
+    shadow-[0px_5px_50px_0px_rgba(0,0,0,0.10)] 
+    will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade 
+    data-[state=open]:data-[side=right]:animate-slideLeftAndFade 
+    data-[state=open]:data-[side=bottom]:animate-slideUpAndFade 
+    data-[state=open]:data-[side=left]:animate-slideRightAndFade;
+  }
+
+  .section {
+    @apply container py-[37px] min-h-screen;
+  }
+}
+
+.add-padding input {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.overide-round select {
+  border-radius: 100px !important;
+}

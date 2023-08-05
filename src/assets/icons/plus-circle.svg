@@ -1,0 +1,12 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="vaadin:plus-circle" clip-path="url(#clip0_3090_1951)">
+        <path id="Vector"
+            d="M13.7383 0C6.31328 0 0.238281 6.075 0.238281 13.5C0.238281 20.925 6.31328 27 13.7383 27C21.1633 27 27.2383 20.925 27.2383 13.5C27.2383 6.075 21.1633 0 13.7383 0ZM22.1758 15.1875H15.4258V21.9375H12.0508V15.1875H5.30078V11.8125H12.0508V5.0625H15.4258V11.8125H22.1758V15.1875Z"
+            fill="currentColor" />
+    </g>
+    <defs>
+        <clipPath id="clip0_3090_1951">
+            <rect width="29.708" height="29.708" fill="currentColor" transform="translate(0.238281)" />
+        </clipPath>
+    </defs>
+</svg>

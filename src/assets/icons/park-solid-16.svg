@@ -1,0 +1,22 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-park-solid:play" clip-path="url(#clip0_3112_7261)">
+<g id="Mask group">
+<mask id="mask0_3112_7261" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+<g id="Group">
+<g id="Group_2">
+<path id="Vector" d="M8.00065 14.6668C11.6827 14.6668 14.6673 11.6822 14.6673 8.00016C14.6673 4.31816 11.6827 1.3335 8.00065 1.3335C4.31865 1.3335 1.33398 4.31816 1.33398 8.00016C1.33398 11.6822 4.31865 14.6668 8.00065 14.6668Z" fill="currentColor" stroke="currentColor" stroke-width="2.28571" stroke-linejoin="round"/>
+<path id="Vector_2" d="M6.66797 8.00025V5.69092L8.66797 6.84558L10.668 8.00025L8.66797 9.15492L6.66797 10.3096V8.00025Z" fill="black" stroke="black" stroke-width="2.28571" stroke-linejoin="round"/>
+</g>
+</g>
+</mask>
+<g mask="url(#mask0_3112_7261)">
+<path id="Vector_3" d="M0.000976562 0H16.001V16H0.000976562V0Z" fill="currentColor"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_3112_7261">
+<rect width="16" height="16" fill="currentColor" transform="translate(0 0.000244141)"/>
+</clipPath>
+</defs>
+</svg>
