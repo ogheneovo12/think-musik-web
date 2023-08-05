@@ -11,7 +11,7 @@ export const theme: CustomFlowbiteTheme = {
         off: "w-[273px]",
       },
       inner:
-        "h-full overflow-y-auto overflow-x-hidden  bg-white py-4 px-0 dark:bg-nav-dark",
+        "h-full overflow-y-auto overflow-x-hidden scrollbar-thumb-rounded-md scrollbar-thin scrollbar-thumb-primary-blue scrollbar-track-gray-100  bg-white py-4 px-0 dark:bg-nav-dark",
     },
     item: {
       base: "",

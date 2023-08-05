@@ -75,7 +75,7 @@ export default function TipPage() {
             </option>
           </SelectInput>
         </div>
-        <div className="grid-col3 my-4">
+        <div className="grid-col3 my-4 gap-6">
           {tipList?.map((course) => (
             <CourseCard
               key={v4()}

@@ -74,7 +74,7 @@ export default function Home() {
             </option>
           </SelectInput>
         </div>
-        <div className="grid-col3 my-4">
+        <div className="grid-col3 my-4 gap-6">
           {courseList?.map((course) => (
             <CourseCard
               key={v4()}

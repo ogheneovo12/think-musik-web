@@ -65,7 +65,7 @@ function MyListPage() {
           </Button>
         }
       >
-        <div className="grid-col3 mt-[74px]">
+        <div className="grid-col3 mt-[74px] gap-6">
           {list?.map((item) => (
             <CourseCard {...item} key={v4()} inList onDelete={handleDelete} />
           ))}

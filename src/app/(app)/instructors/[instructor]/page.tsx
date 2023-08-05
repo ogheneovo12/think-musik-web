@@ -51,7 +51,7 @@ function InstructorPage({ params }: { params: { instructor: string } }) {
         </div>
       </div>
       <ContentSection className="mt-[35px]" title="Courses">
-        <div className="grid-col3 my-4">
+        <div className="grid-col3 my-4 gap-6">
           {courseList?.map((course) => (
             <CourseCard
               key={v4()}

@@ -32,7 +32,7 @@ export default function Home() {
       <p className="pri-text">
         Take your first steps towards building successful learning habits.
       </p>
-      <div className=" my-8 grid-col3">
+      <div className=" my-8 grid-col3 gap-10">
         <ActivityBox
           icon={<LearningIcon />}
           title="Learning Path"
@@ -86,7 +86,7 @@ export default function Home() {
         emptyTitle="Browse courses to start learning."
       ></ContentSection>
       <ContentSection title="New Courses" className="my-[60px]">
-        <div className="grid-col3 my-4">
+        <div className="grid-col3 gap-6 my-4">
           {courseList?.map((course) => (
             <CourseCard key={v4()} {...course} />
           ))}

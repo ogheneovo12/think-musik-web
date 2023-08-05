@@ -107,7 +107,7 @@ export default function LearningPage() {
             Advanced <Image className="ml-2" src={padlock} alt="" />
           </Button>
         </div>
-        <div className="grid-col3 my-4">
+        <div className="grid-col3 my-4 gap-6">
           {courseList?.map((course) => (
             <CourseCard
               key={v4()}

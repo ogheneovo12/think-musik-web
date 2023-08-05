@@ -30,7 +30,7 @@ export interface ICourseCardProps
 
 const theme: CustomFlowbiteTheme["card"] = {
   root: {
-    base: "flex rounded-lg  bg-white shadow-md  dark:bg-nav-dark",
+    base: "flex rounded-lg  bg-white shadow-md  dark:bg-nav-dark w-full",
     children: "flex h-full flex-col justify-center gap-4 p-[19px]",
   },
 };
@@ -42,8 +42,8 @@ export function ImageCard({
   titleClassName,
 }: ImageCardProps) {
   return (
-    <Card theme={theme}>
-      <Image src={img} alt={title} />
+    <Card theme={theme} className="w-full">
+      <Image src={img} alt={title} className="w-full object-cover" />
       <div className="w-full">
         <h4 className={cx("title text-base", titleClassName)}>{title}</h4>
         {children}
