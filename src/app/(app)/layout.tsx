@@ -2,12 +2,6 @@
 import AppContentWrapper from "@/components/AppContentWrapper";
 import AppNavbar from "@/components/Navbar/AppNavbar";
 import AppSidebar from "@/components/Sidebar/Sidebar";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Travit",
-  description: "A birds eye view of the world",
-};
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
