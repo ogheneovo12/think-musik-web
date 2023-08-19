@@ -56,6 +56,7 @@ module.exports = {
         "primary-blue": "#3375D9",
         "grey-main": "#D1D2D6",
         "extra-white": "#FAFAFB",
+        "content-light": "#F3F3F5",
         "light-text": "#71717A",
         golden: "#FFC80B",
         "input-txt": "rgba(212, 213, 217, 0.50)",

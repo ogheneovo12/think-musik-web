@@ -17,11 +17,17 @@ import { courseList, songSheets } from "@/assets/data/cardlist.data";
 import { v4 } from "uuid";
 import ReferalModal from "@/components/ReferalModal";
 import { useAppDispatch } from "@/redux/hooks";
-import { toggleReferralModal, toggleShowFeatureRequest } from "@/redux/features";
+import {
+  toggleReferralModal,
+  toggleShowFeatureRequest,
+} from "@/redux/features";
 import FeatureRequestModal from "@/components/FeatureRequestModal";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const dispatch = useAppDispatch();
+  const [selected, setSelected] = useState<string[]>([]);
 
   return (
     <section className="container py-[37px] min-h-screen">
@@ -38,6 +44,7 @@ export default function Home() {
           title="Learning Path"
           actionText="start"
           href="/learning"
+          highlight
         />
         <ActivityBox
           icon={<MyListIcon />}
@@ -85,15 +92,46 @@ export default function Home() {
         emptyDescription="You don't have any active courses"
         emptyTitle="Browse courses to start learning."
       ></ContentSection>
-      <ContentSection title="New Courses" className="my-[60px]">
+      <ContentSection
+        title="New Courses"
+        className="my-[60px]"
+        actions={
+          <Link
+            href="/courses"
+            className="font-medium text-base text-[#4777E1]"
+          >
+            View all
+          </Link>
+        }
+      >
         <div className="grid-col3 gap-6 my-4">
           {courseList?.map((course) => (
-            <CourseCard key={v4()} {...course} />
+            <CourseCard
+              key={v4()}
+              {...course}
+              onDelete={() => {
+                setSelected((prev) => prev?.filter((it) => it !== course?.id));
+              }}
+              onAddToList={() => {
+                if (course?.id) {
+                  console.log("ey");
+                  setSelected((prev) => [...prev, course?.id as string]);
+                }
+              }}
+              inList={selected?.includes(course?.id || "")}
+            />
           ))}
         </div>
       </ContentSection>
 
-      <ContentSection title="New Song Sheet" className="my-[60px]">
+      <ContentSection title="New Song Sheet" className="my-[60px]"   actions={
+          <Link
+            href="/song-sheet"
+            className="font-medium text-base text-[#4777E1]"
+          >
+            View all
+          </Link>
+        }>
         <div className="grid-col3 my-4">
           {songSheets?.map((course) => (
             <ImageCard key={v4()} {...course} />

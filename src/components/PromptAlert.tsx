@@ -16,16 +16,16 @@ export default function PromptAlert({
 }) {
   return (
     <>
-      <Modal popup show={isOpen} onClose={onClose}>
+      <Modal size={"3xl"} popup show={isOpen} onClose={onClose}>
         <Modal.Body
           className={cx(
-            "min-h-[574px] relative flex flex-col items-center justify-center",
+            "min-h-[347px] relative flex flex-col items-center justify-center",
             className
           )}
         >
           <button
             onClick={onClose}
-            className="absolute text-center right-5 top-5 rounded-full h-[41px] w-[41px] bg-black bg-opacity-5 dark:bg-opacity-100 dark:bg-white"
+            className="absolute hover:bg-red-500 dark:hover:bg-red-500 dark:hover:bg-opacity-100 hover:text-white text-center right-5 top-5 rounded-full h-[41px] w-[41px] bg-black bg-opacity-5 dark:bg-opacity-100 dark:bg-white"
           >
             X
           </button>

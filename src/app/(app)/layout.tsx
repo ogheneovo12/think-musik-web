@@ -1,7 +1,18 @@
 "use client";
-import AppContentWrapper from "@/components/AppContentWrapper";
+import dynamic from "next/dynamic";
+const AppContentWrapper = dynamic(
+  () => import("@/components/AppContentWrapper"),
+  { ssr: false, loading: AppContentWrapperLoading }
+);
+const AppSidebar = dynamic(() => import("@/components/Sidebar/Sidebar"), {
+  ssr: false,
+  loading: () => (
+    <div className="fixed min-h-screen animate-pulse bg-gray-200  border-grey-main border-r top-0 w-[273px]"></div>
+  ),
+});
+
 import AppNavbar from "@/components/Navbar/AppNavbar";
-import AppSidebar from "@/components/Sidebar/Sidebar";
+import { AppContentWrapperLoading } from "@/components/AppContentWrapper";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +20,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <AppSidebar />
       <AppContentWrapper>
         <AppNavbar />
-        <main className="min-h-screen bg-extra-white dark:bg-dark-blue">
+        <main className="min-h-screen bg-content-light dark:bg-dark-blue">
           {children}
         </main>
       </AppContentWrapper>

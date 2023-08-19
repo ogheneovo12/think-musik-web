@@ -2,7 +2,7 @@ import type { CustomFlowbiteTheme } from "flowbite-react";
 export const inputDarkStyles =
   "focus:border-primary-blue focus:ring-primary-blue dark:border-dark-blue-700 dark:focus:border-primary-blue dark:bg-transparent dark:text-input-txt dark:placeholder-input-text dark:focus:border-primary-blue dark:focus:ring-primary-blue";
 export const baseSidbarItemStyle =
-  "flex items-center justify-center  px-2 py-2 h-14 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:text-grey-main dark:hover:bg-gray-700";
+  "flex items-center justify-center  px-2 py-2 h-14 text-sm font-medium text-dark-blue hover:bg-gray-100 dark:text-grey-main dark:hover:bg-gray-700";
 export const theme: CustomFlowbiteTheme = {
   sidebar: {
     root: {
@@ -14,12 +14,12 @@ export const theme: CustomFlowbiteTheme = {
         "h-full overflow-y-auto overflow-x-hidden scrollbar-thumb-rounded-md scrollbar-thin scrollbar-thumb-primary-blue scrollbar-track-gray-100  bg-white py-4 px-0 dark:bg-nav-dark",
     },
     item: {
-      base: "",
+      "base": "",
       active:
-        "bg-nav-gradient border-l-[5px] border-primary-blue dark:text-primary-blue",
+        "bg-nav-gradient border-l-[5px] border-primary-blue text-primary-blue dark:text-primary-blue",
       icon: {
-        base: "h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white",
-        active: "text-gray-700 dark:text-primary-blue",
+        base: "h-6 w-6 flex-shrink-0 text-dark-blue transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white",
+        active: "text-primary-blue dark:text-primary-blue",
       },
     },
   },
@@ -46,15 +46,19 @@ export const theme: CustomFlowbiteTheme = {
   },
   modal: {
     root: {
+      base: "fixed top-0 right-0 left-0 z-50 h-modal h-screen w-screen overflow-y-auto overflow-x-hidden md:inset-0 md:h-full",
       show: {
         on: "flex bg-gray-900 backdrop-blur-[15px] bg-[rgba(22,27,47,0.60)]",
         off: "hidden",
       },
       sizes: {
         "5xl": "max-w-[1099px]",
+        "4xl": "max-w-[985px]",
+        "3xl": "max-w-[574px]",
       },
     },
     content: {
+      base: "relative h-full  w-full p-0 md:h-auto",
       inner:
         "relative rounded-[40px] bg-white shadow dark:bg-dark-blue flex flex-col max-h-[90vh]",
     },
@@ -69,7 +73,7 @@ export const theme: CustomFlowbiteTheme = {
   textInput: {
     field: {
       input: {
-        base: "block w-full border focus:outline-none  disabled:cursor-not-allowed disabled:opacity-50",
+        base: "block w-full  border focus:outline-none h-full disabled:cursor-not-allowed disabled:opacity-50 placeholder:italic",
         colors: {
           gray: `bg-gray-50 text-gray-900 ${inputDarkStyles}`,
         },

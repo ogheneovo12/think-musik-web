@@ -24,8 +24,13 @@ export interface ICourseCardProps
   showDuration?: boolean;
   viewLink?: string;
   id?: string;
-  getViewLink?: (course: Omit<ICourseCardProps, "getViewLink">) => string;
-  onDelete?: (course: Omit<ICourseCardProps, "getViewLink">) => void;
+  getViewLink?: (course: Omit<ICourseCardProps, "getViewLink" | "onDelete" | "onAddToList">) => string;
+  onDelete?: (
+    course: Omit<ICourseCardProps, "getViewLink" | "onDelete" | "onAddToList">
+  ) => void;
+  onAddToList?: (
+    course: Omit<ICourseCardProps, "getViewLink" | "onDelete" | "onAddToList">
+  ) => void;
 }
 
 const theme: CustomFlowbiteTheme["card"] = {
@@ -55,6 +60,7 @@ export function ImageCard({
 function CourseCard({
   getViewLink,
   onDelete = () => {},
+  onAddToList = () => {},
   ...rest
 }: ICourseCardProps) {
   const {
@@ -80,7 +86,9 @@ function CourseCard({
               <CancelIcon />
             </button>
           ) : (
-            <PlusCircle />
+            <button onClick={() => onAddToList(rest)}>
+              <PlusCircle />
+            </button>
           )}
           <Link href={getViewLink ? getViewLink(rest) : viewLink}>
             <ParkSolid />

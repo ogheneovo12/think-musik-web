@@ -16,6 +16,7 @@ export default function ReferalModal() {
         size={"5xl"}
         show={showReferralModal}
         onClose={() => dispatch(toggleReferralModal())}
+        className="p-0"
       >
         <Modal.Body className="min-h-[587px] p-0 relative">
           <button
@@ -48,7 +49,7 @@ export default function ReferalModal() {
                   text={"https://thinkmusik.com/dh48djdrd"}
                   onCopy={() => toast.success("Link Copied")}
                 >
-                  <Button className="w-full max-w-[308px] h-[54px] mt-[40px] text-base font-semibold">
+                  <Button className="w-full max-w-[308px] h-[55px] mt-[40px] text-base font-semibold">
                     Copy Link <ClipboardIcon className="ml-2" />
                   </Button>
                 </CopyToClipboard>

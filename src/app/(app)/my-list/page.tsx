@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import { v4 } from "uuid";
 import Trash from "@/assets/icons/trash.svg";
 import PromptAlert from "@/components/PromptAlert";
+import Link from "next/link";
 
 function MyListPage() {
   const [list, setList] = useState(courseList);
@@ -56,13 +57,12 @@ function MyListPage() {
         emptyTitle="You haven't added any lessons yet"
         emptyDescription="Once you add a lesson to My List, it will show up here for you to access later."
         emptyContent={
-          <Button
-            size="xs"
-            color="blue"
-            className="text-xs font-normal h-[40px] w-full max-w-[172px] mt-[30px]"
+          <Link
+            href={"/courses"}
+            className="text-xs bg-primary-blue text-white flex items-center justify-center rounded-[40px] font-normal h-[40px] w-full max-w-[172px] mt-[30px]"
           >
             Explore Courses
-          </Button>
+          </Link>
         }
       >
         <div className="grid-col3 mt-[74px] gap-6">

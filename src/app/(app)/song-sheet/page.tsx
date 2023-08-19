@@ -11,6 +11,10 @@ import { courseList } from "@/assets/data/cardlist.data";
 import { ImageCard } from "@/components/CourseCard";
 import { v4 } from "uuid";
 import PdfIcon from "@/assets/icons/pdf.svg";
+import RadixSelect, {
+  SelectSeperator,
+  SelectItem,
+} from "@/components/RadixSelect";
 
 export default function Home() {
   const [filterOption, setFilterOption] = useState("Most Popular");
@@ -44,6 +48,7 @@ export default function Home() {
             className="w-full max-w-[649px]"
             theme={{
               field: {
+                base: "relative w-full h-[55px] ",
                 input: {
                   withAddon: {
                     off: "rounded-[40px]",
@@ -51,37 +56,52 @@ export default function Home() {
                   colors: {
                     gray: `bg-black bg-opacity-5 ${inputDarkStyles}`,
                   },
+                  sizes: {
+                    md: "px-[24px]",
+                  },
                 },
               },
             }}
             rightIcon={SearchIcon}
+            placeholder="Search for Song, Artist, Genre"
           />
           <div className="flex items-center my-2">
             <p className="pri-text mr-2">Filter By:</p>
-            <Dropdown
-              label=""
-              renderTrigger={() => (
-                <p className="text-primary-blue font-semibold  cursor-pointer">
-                  {filterOption}
-                </p>
-              )}
+            <RadixSelect
+              defaultVlaue="Most Popular"
+              hideCheveron
+              placeholder="Sort"
+              contentWidth="190px"
+              className="text-primary-blue font-semibold outline-none focus:outline-none"
             >
-              <Dropdown.Item onClick={() => setFilterOption("Most Popular")}>
+              <SelectItem className="text-sm data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Most Popular"}>
                 Most Popular
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setFilterOption("Beginner")}>
-                Beginner
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setFilterOption("Advanced")}>
-                Advanced
-              </Dropdown.Item>
-            </Dropdown>
+              </SelectItem>
+
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Newest First"}>
+                Newest First
+              </SelectItem>
+
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Oldest First"}>
+                Oldest First
+              </SelectItem>
+
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Name: A-Z"}>
+                Name: A-Z
+              </SelectItem>
+
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Name: Z-A"}>
+                Name: Z-A
+              </SelectItem>
+            </RadixSelect>
           </div>
         </div>
         <div className="grid-col3 mt-[42px]">
           {courseList?.map((course) => (
             <ImageCard {...course} key={v4()}>
-              <p className="dark:text-grey-main text-gray-600 text-sm">Dunsin Oyekan</p>
+              <p className="dark:text-grey-main text-gray-600 text-sm">
+                Dunsin Oyekan
+              </p>
               <Button className="space-x-2 w-full mt-[10px]" color="blue">
                 Download Song Sheet <PdfIcon />
               </Button>

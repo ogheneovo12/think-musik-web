@@ -10,7 +10,7 @@ export default function FeatureRequestModal() {
   return (
     <>
       <Modal
-        size={"5xl"}
+        size={"4xl"}
         show={showFeatureRequest}
         onClose={() => dispatch(toggleShowFeatureRequest())}
       >
@@ -22,20 +22,25 @@ export default function FeatureRequestModal() {
             X
           </button>
           <div className="flex items-stretch h-[587px] max-h-[90vh]">
-            <div className="w-full rounded-tl-[40px] rounded-bl-[40px] hidden sm:block  max-w-[450px] bg-[url(/request.png)] h-full bg-cover bg-no-repeat"></div>
+            <div className="w-full rounded-tl-[40px] rounded-bl-[40px] hidden sm:block  max-w-[390px] bg-[url(/request.png)] h-full bg-cover bg-no-repeat"></div>
             <div className="flex-grow flex-shrink-0 justify-center flex items-center">
-              <div className=" flex flex-col items-center justify-center max-w-[373px] text-center">
+              <div className=" flex flex-col items-center justify-center w-full max-w-[436px] text-center">
                 <h3 className="title flex font-bold">
                   <MoneyBagEmoji className="mr-4" /> Request for a Feature
                 </h3>
-                <p className="pri-text mt-[22px] mb-[30px]">
+                <p className="pri-text mt-[22px] mb-[30px] w-full max-w-[410px] mx-auto">
                   What feature do you suggest in ThinkMusik&apos;s next update ?
                 </p>
-                <Textarea className="text-sm" rows={5} placeholder="I would like to suggest " />
+                <Textarea
+                  className="text-sm border-none min-h-[168px]"
+                  rows={7}
+                  placeholder="I would like to suggest "
+                />
 
                 <Button
                   color="dark"
-                  className="w-full max-w-[256px] h-[54px] mt-[30px] text-base font-semibold enabled:bg-primary-blue dark:enabled:bg-primary-blue"
+                  size="lg"
+                  className="w-full max-w-[308px] h-[46px] mt-[30px] text-base font-semibold enabled:bg-primary-blue dark:enabled:bg-primary-blue"
                 >
                   Submit
                 </Button>

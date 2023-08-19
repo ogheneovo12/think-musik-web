@@ -36,18 +36,21 @@ export const courseList: ICourseCardProps[] = [
     title: "R & B Tutorial by Melanie",
     lessonCount: 20,
     level: CourseLevel.BEGINNER,
+    id: "course1",
   },
   {
     img: courseImage,
     title: "How to Play Triads by Daniey ",
     lessonCount: 20,
     level: CourseLevel.INTERMEDIATE,
+    id: "course2",
   },
   {
     img: courseImage,
     title: "Jimi Hendrix Licks by Melanie ",
     lessonCount: 10,
     level: CourseLevel.ADVANCE,
+    id: "course3",
   },
 ];
 export const songSheets: ImageCardProps[] = [

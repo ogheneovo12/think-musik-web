@@ -16,4 +16,12 @@ function AppContentWrapper(props: React.PropsWithChildren) {
   );
 }
 
+export function AppContentWrapperLoading() {
+  return (
+    <div className={cx("flex-grow animate-pulse", "sm:ml-[273px]")}>
+      <div className="w-full bg-gray-200  border-b border-grey-main h-[74px]"></div>
+    </div>
+  );
+}
+
 export default AppContentWrapper;

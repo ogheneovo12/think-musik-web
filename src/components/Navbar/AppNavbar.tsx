@@ -42,6 +42,7 @@ export default function AppNavbar() {
         <div className="flex md:order-2 space-x-4 md:space-x-[32px] items-center">
           <TextInput
             className=" hidden md:block"
+            placeholder="Search"
             icon={SearchIcon}
             theme={{
               base: "rounded-[5px]",
