@@ -32,7 +32,7 @@ export default function Breadcrumb({
         >
           <span className="group-first:hidden mx-2">/</span>
           {item?.isActive ? (
-            <span className="dark:text-white text-grey-main">
+            <span className="dark:text-white">
               {item?.label}
             </span>
           ) : (

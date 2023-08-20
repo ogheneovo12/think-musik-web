@@ -32,13 +32,13 @@ export default function Home() {
         description="Our experienced instructors are passionate music players and educators with years of expertise. They'll guide you on your musical journey."
       />
       <ContentSection title="All Instructors">
-        <div className="grid-col3 my-6">
+        <div className="grid-col3  my-6 gap-[54px]">
           {instructorList?.map((instructor) => (
-            <InstructorCard {...instructor} key={v4()} />
+            <InstructorCard {...instructor} key={v4()} className="max-w-none" />
           ))}
-          <div className="h-[490px] w-full max-w-[313px] p-4 z-0 relative rounded-lg bg-nav-dark flex flex-col justify-center items-center text-center">
+          <div className="h-[490px] w-full  p-4 z-0 relative rounded-lg bg-nav-dark flex flex-col justify-center items-center text-center">
             <QuestionMarkIcon />
-            <p className="title mt-4 mb-7"> Want to be the next guitar Instructor</p>
+            <p className="title text-white mt-4 mb-7"> Want to be the next guitar Instructor</p>
             <Link
               href="/"
               className="w-full inline-flex items-center justify-center p-4 rounded-[40px] max-w-[172px] h-[40px] bg-primary-blue hover:bg-opacity-70 text-white text-sm font-medium"

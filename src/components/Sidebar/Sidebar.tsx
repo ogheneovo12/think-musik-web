@@ -83,7 +83,7 @@ export default function AppSidebar() {
             <div className={"flex items-center"}>
               Dark Mode{" "}
               <DarkThemeToggle
-                onClick={(newTheme) => {
+                onClick={() => {
                   if (toggleMode) {
                     toggleMode();
                   }

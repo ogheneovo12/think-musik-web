@@ -26,7 +26,7 @@ function ActivityBox({
     >
       <div className="text-primary-blue">{icon}</div>
       <h3 className="title text-dark-blue-700 my-2">{title}</h3>
-      <Link href={href} className="flex items-center pri-text">
+      <Link href={href} className="flex items-center pri-text text-dark-blue-700">
         {actionText} <ArrowForward className="ml-2" />
       </Link>
     </div>

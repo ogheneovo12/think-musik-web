@@ -38,7 +38,7 @@ function RadixSelect({
           }}
           className="overflow-hidden w-screen  bg-white dark:border-nav-dark dark:bg-nav-dark rounded-md shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]"
         >
-          <Select.ScrollUpButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
+          <Select.ScrollUpButton className="flex items-center justify-center h-[25px] bg-white text-nav-dark-700 cursor-default">
             <BsChevronUp />
           </Select.ScrollUpButton>
           <Select.Viewport>{children}</Select.Viewport>
@@ -59,7 +59,7 @@ export const SelectItem = React.forwardRef<
     return (
       <Select.Item
         className={classnames(
-          "text-base leading-none text-grey-main dark:text-white rounded-bl-md rounded-br-md flex items-center py-[14px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1",
+          "text-base leading-none text-dark-blue-700 dark:text-white rounded-bl-md rounded-br-md flex items-center py-[14px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1",
           className
         )}
         {...props}

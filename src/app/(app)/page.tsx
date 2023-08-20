@@ -44,7 +44,6 @@ export default function Home() {
           title="Learning Path"
           actionText="start"
           href="/learning"
-          highlight
         />
         <ActivityBox
           icon={<MyListIcon />}
@@ -63,14 +62,14 @@ export default function Home() {
         <Button
           onClick={() => dispatch(toggleReferralModal())}
           color="dark"
-          className="w-full max-w-[257px]"
+          className="w-full sm:max-w-[257px]"
         >
           <MoneyBagEmoji className="mr-2" /> Invite a friend
         </Button>
         <Button
           onClick={() => dispatch(toggleShowFeatureRequest())}
           color="dark"
-          className="w-full max-w-[257px]"
+          className="w-full sm:max-w-[257px]"
         >
           <RocketEmoji className="mr-2" />
           Request a feature

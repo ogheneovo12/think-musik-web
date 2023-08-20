@@ -40,8 +40,8 @@ export const theme: CustomFlowbiteTheme = {
       on: "rounded-full",
     },
     color: {
-      blue: "bg-primary-blue enabled:hover:bg-opacity-90 hover:bg-opacity-90 focus:ring-4 focus:ring-cyan-300 text-white",
-      dark: "text-white bg-primary-blue border border-transparent enabled:hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 dark:bg-nav-dark dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700",
+      blue: "bg-primary-blue enabled:hover:bg-opacity-90 hover:bg-opacity-90 text-white",
+      dark: "text-primary-blue bg-transparent border border-primary-blue enabled:hover:bg-primary-blue  enabled:hover:text-white dark:bg-nav-dark dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700",
     },
   },
   modal: {

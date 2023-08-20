@@ -87,7 +87,7 @@ export default function LearningPage() {
       <ContentSection className="my-10" title="Categories">
         <div className="flex flex-wrap items-center mt-6">
           <Button
-            className="w-full  max-w-[200px] dark:border-primary-blue text-white dark:text-primary-blue my-2 mr-6"
+            className="w-full  sm:max-w-[200px] dark:border-primary-blue dark:text-primary-blue my-2 mr-6"
             color="dark"
           >
             Beginner
@@ -95,14 +95,14 @@ export default function LearningPage() {
           <Button
             onClick={() => setBlockModal("intermediate")}
             color="dark"
-            className="w-full max-w-[200px] text-white dark:text-light-text dark:border-dark-blue-700 my-2 mr-6"
+            className="w-full sm:max-w-[200px]  dark:text-light-text dark:border-dark-blue-700 my-2 mr-6"
           >
             Intermediate <Image className="ml-2" src={padlock} alt="" />
           </Button>
           <Button
             onClick={() => setBlockModal("advance")}
             color="dark"
-            className="w-full max-w-[200px] text-white dark:text-light-text dark:border-dark-blue-700 my-2 mr-6"
+            className="w-full sm:max-w-[200px]  dark:text-light-text dark:border-dark-blue-700 my-2 mr-6"
           >
             Advanced <Image className="ml-2" src={padlock} alt="" />
           </Button>
