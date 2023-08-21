@@ -13,6 +13,7 @@ import { easeQuadInOut } from "d3-ease";
 import PlusCircle from "@/assets/icons/plus-circle-16.svg";
 import ParkSolid from "@/assets/icons/park-solid-16.svg";
 import Link from "next/link";
+import { BsFillPlusCircleFill, BsPlayCircleFill } from "react-icons/bs"
 
 export interface ILesssonBoxProps {
   title: string;
@@ -37,9 +38,9 @@ function LessonBox({ getViewLink, ...rest }: ILesssonBoxProps) {
         <h2 className="title text-lg my-4 sm:my-0">{title}</h2>
       </div>
       <div className="flex items-center w-full max-w-[430px] space-x-4">
-        <Button size="xs" className="w-full text-primary-blue dark:text-white text-xs font-medium border-primary-blue border max-w-[172px] h-[40px] enabled:hover:bg-primary-blue enabled:hover:text-white enabled:bg-transparent dark:enabled:bg-transparent">
+        <Button size="xs" className="w-full text-primary-blue dark:text-white text-xs font-medium border-primary-blue border max-w-[172px] h-[40px] enabled:hover:bg-primary-blue enabled:hover:text-white enabled:bg-transparent dark:enabled:bg-transparent focus:ring-0">
           <span className="hidden sm:inline-block">Add to My List</span>{" "}
-          <PlusCircle className="sm:ml-4 w-4 h-4" />
+          <BsFillPlusCircleFill className="sm:ml-4 w-5 h-5" />
         </Button>
         <Button
           color="blue"
@@ -49,7 +50,7 @@ function LessonBox({ getViewLink, ...rest }: ILesssonBoxProps) {
           className="w-full max-w-[172px] h-[40px] text-xs font-medium"
         >
           <span className="hidden sm:inline-block">Watch</span>{" "}
-          <ParkSolid className="sm:ml-4 w-4 h-4" />
+          <BsPlayCircleFill className="sm:ml-4 w-5 h-5" />
         </Button>
         <div className="flex-shrink-0" style={{ width: 54, height: 54 }}>
           <AnimateProgressProvider

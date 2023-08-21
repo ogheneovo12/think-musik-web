@@ -20,7 +20,7 @@ export default function Breadcrumb({
 }) {
   return (
     <FlBreadCrumb theme={{
-      list:"flex items-center flex-wrap"
+      list:"flex items-center flex-wrap justify-center "
     }} aria-label="hamburger" className={cx("flex-wrap",className)}>
       {items?.map((item) => (
         <FlBreadCrumb.Item

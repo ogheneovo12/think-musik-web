@@ -1,5 +1,5 @@
 import { CourseLevel } from "@/types";
-import { Card, CustomFlowbiteTheme } from "flowbite-react";
+import { Card, CustomFlowbiteTheme, Tooltip } from "flowbite-react";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import PlusCircle from "@/assets/icons/plus-circle.svg";
@@ -7,7 +7,8 @@ import ParkSolid from "@/assets/icons/park-solid.svg";
 import CancelIcon from "@/assets/icons/cancel.svg";
 import cx from "classnames";
 import Link from "next/link";
-
+import { BsFillPlusCircleFill, BsPlayCircleFill } from "react-icons/bs";
+import { FaTimesCircle } from "react-icons/fa";
 export interface ImageCardProps {
   img: StaticImageData | string;
   title: string;
@@ -24,7 +25,9 @@ export interface ICourseCardProps
   showDuration?: boolean;
   viewLink?: string;
   id?: string;
-  getViewLink?: (course: Omit<ICourseCardProps, "getViewLink" | "onDelete" | "onAddToList">) => string;
+  getViewLink?: (
+    course: Omit<ICourseCardProps, "getViewLink" | "onDelete" | "onAddToList">
+  ) => string;
   onDelete?: (
     course: Omit<ICourseCardProps, "getViewLink" | "onDelete" | "onAddToList">
   ) => void;
@@ -83,15 +86,23 @@ function CourseCard({
         <div className="flex items-center space-x-5 text-primary-blue dark:text-grey-main ">
           {inList ? (
             <button onClick={() => onDelete(rest)}>
-              <CancelIcon />
+              <Tooltip
+                placement="bottom"
+                content="Remove from My List"
+              >
+                <FaTimesCircle className="w-7 h-7" />
+              </Tooltip>
             </button>
           ) : (
             <button onClick={() => onAddToList(rest)}>
-              <PlusCircle />
+              <Tooltip placement="bottom" content="Add to My List">
+                <BsFillPlusCircleFill className="w-7 h-7" />
+              </Tooltip>
             </button>
           )}
+
           <Link href={getViewLink ? getViewLink(rest) : viewLink}>
-            <ParkSolid />
+            <BsPlayCircleFill className="w-7 h-7" />
           </Link>
         </div>
       </div>

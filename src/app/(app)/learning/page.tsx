@@ -38,6 +38,8 @@ const modalContent: Record<
 
 export default function LearningPage() {
   const [blockModal, setBlockModal] = useState("");
+  const [selected, setSelected] = useState<string[]>([]);
+
   return (
     <section className="section">
       <div className="flex justify-center mb-[30px]">
@@ -112,6 +114,16 @@ export default function LearningPage() {
             <CourseCard
               key={v4()}
               {...course}
+              onDelete={() => {
+                setSelected((prev) => prev?.filter((it) => it !== course?.id));
+              }}
+              onAddToList={() => {
+                if (course?.id) {
+                  console.log("ey");
+                  setSelected((prev) => [...prev, course?.id as string]);
+                }
+              }}
+              inList={selected?.includes(course?.id || "")}
               viewLink={`/learning/${course.title}`}
             />
           ))}

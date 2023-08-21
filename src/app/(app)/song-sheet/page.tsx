@@ -74,23 +74,23 @@ export default function Home() {
               contentWidth="190px"
               className="text-primary-blue font-semibold outline-none focus:outline-none"
             >
-              <SelectItem className="text-sm data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Most Popular"}>
+              <SelectItem className="text-sm data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue data-[highlighted]:bg-transparent data-[highlighted]:text-primary-blue" value={"Most Popular"}>
                 Most Popular
               </SelectItem>
 
-              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Newest First"}>
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue data-[highlighted]:bg-transparent data-[highlighted]:text-primary-blue" value={"Newest First"}>
                 Newest First
               </SelectItem>
 
-              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Oldest First"}>
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue data-[highlighted]:bg-transparent data-[highlighted]:text-primary-blue" value={"Oldest First"}>
                 Oldest First
               </SelectItem>
 
-              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Name: A-Z"}>
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue data-[highlighted]:bg-transparent data-[highlighted]:text-primary-blue" value={"Name: A-Z"}>
                 Name: A-Z
               </SelectItem>
 
-              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue" value={"Name: Z-A"}>
+              <SelectItem className="text-sm  data-[state=checked]:text-primary-blue dark:data-[state=checked]:text-primary-blue data-[highlighted]:bg-transparent data-[highlighted]:text-primary-blue" value={"Name: Z-A"}>
                 Name: Z-A
               </SelectItem>
             </RadixSelect>

@@ -79,7 +79,7 @@ function MyListPage() {
         <p className="title text-primary-blue dark:text-primary-blue mt-[22px]">
           Empty My list
         </p>
-        <p className="pri-text text-lg font-semibold mt-5">
+        <p className="pri-text text-center text-lg font-semibold mt-5">
           Are you sure you want to empty “My List”?
         </p>
         <div className="flex justify-center space-x-4 items-center w-full mt-[51px]">

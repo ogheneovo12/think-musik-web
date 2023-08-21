@@ -32,7 +32,7 @@ export default function Home() {
         description="Our experienced instructors are passionate music players and educators with years of expertise. They'll guide you on your musical journey."
       />
       <ContentSection title="All Instructors">
-        <div className="grid-col3  my-6 gap-[54px]">
+        <div className="grid-col3  my-6 gap-[24px]">
           {instructorList?.map((instructor) => (
             <InstructorCard {...instructor} key={v4()} className="max-w-none" />
           ))}

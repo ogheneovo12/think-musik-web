@@ -16,7 +16,13 @@ export default function PromptAlert({
 }) {
   return (
     <>
-      <Modal size={"3xl"} popup show={isOpen} onClose={onClose}>
+      <Modal
+        size={"3xl"}
+        popup
+        show={isOpen}
+        onClose={onClose}
+        dismissible={true}
+      >
         <Modal.Body
           className={cx(
             "min-h-[347px] relative flex flex-col items-center justify-center",

@@ -1,15 +1,16 @@
 "use client";
 import PageBanner from "@/components/PageBanner";
 import { Button, Tabs } from "flowbite-react";
-import PlusCircle from "@/assets/icons/plus-circle-16.svg";
-import ParkSolid from "@/assets/icons/park-solid-16.svg";
 import { ExploreIcon } from "@/components/Sidebar/sidebarIcons";
 import { LessonBoxList } from "@/components/LessonBox";
 import { lessonList } from "@/assets/data/cardlist.data";
 import { AiOutlineFileSync } from "react-icons/ai";
+import { BsFillPlusCircleFill, BsPlayCircleFill } from "react-icons/bs";
 import Breadcrumb from "@/components/BreadCrumb";
+import { useState } from "react";
 
 export default function Page({ params }: { params: { course: string } }) {
+  
   return (
     <section className="section">
       <div className="flex justify-center mb-[30px]">
@@ -38,11 +39,11 @@ export default function Page({ params }: { params: { course: string } }) {
         <div className="flex items-center my-4 space-x-2">
           <Button className="w-full max-w-[201px] h-[48px] text-xs font-medium enabled:bg-primary-blue dark:enabled:bg-primary-blue">
             <span className="hidden sm:inline-block">Play Course</span>{" "}
-            <ParkSolid className="sm:ml-4 w-4 h-4" />
+            <BsPlayCircleFill className=" w-6 h-6 sm:ml-4 sm:w-4 sm:h-4" />
           </Button>
           <Button className="w-full text-white dark:text-white text-xs font-medium border-white border max-w-[201px] h-[48px] enabled:bg-transparent dark:enabled:bg-transparent">
             <span className="hidden sm:inline-block">Add to My List</span>{" "}
-            <PlusCircle className="sm:ml-4 w-4 h-4" />
+            <BsFillPlusCircleFill className="w-6 h-6 sm:ml-4 sm:w-4 sm:h-4" />
           </Button>
         </div>
       </PageBanner>

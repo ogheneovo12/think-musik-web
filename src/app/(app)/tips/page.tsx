@@ -5,11 +5,17 @@ import Breadcrumb from "@/components/BreadCrumb";
 import ContentSection from "@/components/ContentSection";
 import CourseCard from "@/components/CourseCard";
 import PageBanner from "@/components/PageBanner";
-import RadixSelect, { SelectItem, SelectSeperator, selectClass } from "@/components/RadixSelect";
+import RadixSelect, {
+  SelectItem,
+  SelectSeperator,
+  selectClass,
+} from "@/components/RadixSelect";
 import SelectInput from "@/components/SelectInput";
+import { useState } from "react";
 import { v4 } from "uuid";
 
 export default function TipPage() {
+  const [selected, setSelected] = useState<string[]>([]);
   return (
     <section className="section">
       <div className="flex justify-center mb-[30px]">
@@ -34,7 +40,7 @@ export default function TipPage() {
       />
       <ContentSection title="All Quick Tips">
         <div className="flex items-center  my-8 flex-wrap">
-        <RadixSelect
+          <RadixSelect
             placeholder="Skill Level"
             className={`${selectClass} w-full max-w-[221px] my-2 mr-6`}
           >
@@ -110,6 +116,16 @@ export default function TipPage() {
             <CourseCard
               key={v4()}
               {...course}
+              onDelete={() => {
+                setSelected((prev) => prev?.filter((it) => it !== course?.id));
+              }}
+              onAddToList={() => {
+                if (course?.id) {
+                  console.log("ey");
+                  setSelected((prev) => [...prev, course?.id as string]);
+                }
+              }}
+              inList={selected?.includes(course?.id || "")}
               showDuration
               viewLink={`/tips/${course.id}`}
             />

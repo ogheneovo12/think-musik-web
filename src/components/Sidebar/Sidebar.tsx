@@ -1,5 +1,5 @@
 "use client";
-import { Sidebar, DarkThemeToggle } from "flowbite-react";
+import { Sidebar, DarkThemeToggle, Button } from "flowbite-react";
 import logoImg from "@/assets/images/logo.png";
 import logoBlueImg from "@/assets/images/logo-blue.png";
 import { SidebarMenuGroup, sidebarMenuList } from "./sidebar.data";
@@ -122,7 +122,15 @@ function SidebarItemGroup({
             ),
           }}
         >
-          <p>{item.title}</p>
+          <p>
+            {item.title}{" "}
+            {item?.soon && (
+              <span className="w-full max-w-[101px] ml-2 text-[10px] text-primary-blue bg-pill p-1 px-4 h-[26px] rounded-[20px]">
+                {" "}
+                coming soon
+              </span>
+            )}
+          </p>
         </Sidebar.Item>
       ))}
     </Sidebar.ItemGroup>

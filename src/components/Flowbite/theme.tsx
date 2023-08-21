@@ -46,7 +46,7 @@ export const theme: CustomFlowbiteTheme = {
   },
   modal: {
     root: {
-      base: "fixed top-0 right-0 left-0 z-50 h-modal h-screen w-screen overflow-y-auto overflow-x-hidden md:inset-0 md:h-full",
+      base: "fixed top-0 right-0 left-0 z-50 h-modal  min-h-full w-full overflow-y-auto overflow-x-hidden md:inset-0 md:h-full",
       show: {
         on: "flex bg-gray-900 backdrop-blur-[15px] bg-[rgba(22,27,47,0.60)]",
         off: "hidden",
@@ -58,7 +58,7 @@ export const theme: CustomFlowbiteTheme = {
       },
     },
     content: {
-      base: "relative h-full  w-full p-0 md:h-auto",
+      base: "relative h-full  w-full p-4 md:h-auto",
       inner:
         "relative rounded-[40px] bg-white shadow dark:bg-dark-blue flex flex-col max-h-[90vh]",
     },

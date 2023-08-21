@@ -13,6 +13,7 @@ export type SideBarItem = {
   title: string;
   path: string;
   icon: any;
+  soon?: boolean;
 };
 
 export type SidebarMenuGroup = {
@@ -68,6 +69,7 @@ export const sidebarMenuList: SidebarMenuGroup[] = [
         title: "Shop",
         path: "/shop",
         icon: CartIcon,
+        soon: true,
       },
     ],
   },

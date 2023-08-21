@@ -71,8 +71,17 @@ export default function AppNavbar() {
             inline
             label={
               <Avatar
+                theme={{
+                  root: {
+                    initials: {
+                      text: "font-semibold text-gray-600 dark:text-black",
+                      base: "inline-flex overflow-hidden relative justify-center items-center bg-gray-100 dark:bg-[#50B1D1]",
+                    },
+                  },
+                }}
+                placeholderInitials="SA"
                 alt="User settings"
-                img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                // img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                 rounded
                 className="flex-shrink-0"
               />
@@ -85,8 +94,7 @@ export default function AppNavbar() {
               </span>
             </Dropdown.Header>
             <Dropdown.Item>Dashboard</Dropdown.Item>
-            <Dropdown.Item>Settings</Dropdown.Item>
-            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Item>My Account</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item>Sign out</Dropdown.Item>
           </Dropdown>

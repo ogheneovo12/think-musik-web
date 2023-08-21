@@ -17,17 +17,18 @@ export default function ReferalModal() {
         show={showReferralModal}
         onClose={() => dispatch(toggleReferralModal())}
         className="p-0"
+        dismissible
       >
         <Modal.Body className="min-h-[587px] p-0 relative">
           <button
             onClick={() => dispatch(toggleReferralModal())}
-            className="absolute text-center right-5 top-5 rounded-full h-[41px] w-[41px] bg-white"
+            className="absolute hover:bg-red-500 dark:hover:bg-red-500 dark:hover:bg-opacity-100 hover:text-white text-center right-5 top-5 rounded-full h-[41px] w-[41px] bg-black bg-opacity-5 dark:bg-opacity-100 dark:bg-white"
           >
             X
           </button>
           <div className="flex items-stretch h-[587px] max-h-[90vh]">
             <div className="w-full rounded-tl-[40px] rounded-bl-[40px] hidden sm:block  max-w-[500px] bg-[url(/invite_bg.png)] h-full bg-cover bg-no-repeat"></div>
-            <div className="flex-grow flex-shrink-0 justify-center flex items-center">
+            <div className="flex-grow justify-center flex items-center p-4">
               <div className=" flex flex-col items-center justify-center max-w-[373px] text-center">
                 <h3 className="title flex font-bold">
                   <MoneyBagEmoji className="mr-4" /> Invite a Friend
@@ -40,7 +41,7 @@ export default function ReferalModal() {
 
                 <Button
                   color="dark"
-                  className="w-full h-[54px] mt-3 text-base font-semibold"
+                  className="w-full  h-[54px] mt-3 text-base font-semibold"
                 >
                   https://thinkmusik.com/dh48djdrd
                 </Button>
@@ -49,7 +50,10 @@ export default function ReferalModal() {
                   text={"https://thinkmusik.com/dh48djdrd"}
                   onCopy={() => toast.success("Link Copied")}
                 >
-                  <Button className="w-full max-w-[308px] h-[55px] mt-[40px] text-base font-semibold">
+                  <Button
+                    color="blue"
+                    className="w-full max-w-[308px] h-[55px] mt-[40px] text-base font-semibold"
+                  >
                     Copy Link <ClipboardIcon className="ml-2" />
                   </Button>
                 </CopyToClipboard>

@@ -19,7 +19,7 @@ function RadixSelect({
   contentWidth?: string;
 }>) {
   return (
-    <Select.Root defaultValue={defaultVlaue}>
+    <Select.Root  defaultValue={defaultVlaue}>
       <Select.Trigger className={classnames(className)} aria-label="select">
         <Select.Value placeholder={placeholder} />
         {!hideCheveron && (
@@ -59,7 +59,7 @@ export const SelectItem = React.forwardRef<
     return (
       <Select.Item
         className={classnames(
-          "text-base leading-none text-dark-blue-700 dark:text-white rounded-bl-md rounded-br-md flex items-center py-[14px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1",
+          "text-base leading-none text-dark-blue-700  dark:text-white   flex items-center py-[14px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-primary-blue data-[highlighted]:text-white",
           className
         )}
         {...props}

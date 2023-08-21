@@ -60,6 +60,7 @@ module.exports = {
         "light-text": "#71717A",
         golden: "#FFC80B",
         "input-txt": "rgba(212, 213, 217, 0.50)",
+        pill: "rgba(51, 117, 217, 0.20)",
       },
       boxShadow: {
         header: "0px 5px 20px 0px rgba(0, 0, 0, 0.05)",

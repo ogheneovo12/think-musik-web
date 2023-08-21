@@ -29,10 +29,7 @@ function InstructorPage({ params }: { params: { instructor: string } }) {
             <Button className="w-full max-w-[129px] h-[38px] text-sm font-medium text-gray-600 dark:text-white dark:enabled:bg-dark-blue-700 dark:bg-opacity-100 dark:enabled:hover:bg-dark-blue-700 enabled:hover:bg-opacity-5 enabled:hover:bg-black bg-black bg-opacity-5 ">
               {instructor?.course_count} Courses
             </Button>
-            <Button
-              color="dark"
-              className="w-full max-w-[129px] h-[38px] text-sm font-medium dark:text-white text-gray-600 dark:enabled:bg-dark-blue-700 dark:bg-opacity-100 dark:enabled:hover:bg-dark-blue-700 enabled:hover:bg-opacity-5 enabled:hover:bg-black bg-black bg-opacity-5 "
-            >
+            <Button className="w-full max-w-[129px] h-[38px] text-sm font-medium dark:text-white text-gray-600 dark:enabled:bg-dark-blue-700 dark:bg-opacity-100 dark:enabled:hover:bg-dark-blue-700 enabled:hover:bg-opacity-5 enabled:hover:bg-black bg-black bg-opacity-5 ">
               {instructor?.likes} Likes
             </Button>
           </div>
@@ -42,7 +39,7 @@ function InstructorPage({ params }: { params: { instructor: string } }) {
           <h2 className="dark:text-white mt-2 md:mt-0 text-grey-600 text-3xl md:text-[40px] font-extrabold">
             {instructor?.first_name} {instructor?.last_name}
           </h2>
-          <p className="text-lg font-meduim text-golden my-4 ">
+          <p className="text-lg font-meduim text-black dark:text-golden  my-4 ">
             {instructor?.detailed_breif}
           </p>
           <p className="dark:text-white text-gray-600 text-sm font-medium max-w-[536px] ">

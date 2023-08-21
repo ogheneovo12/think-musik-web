@@ -11,9 +11,11 @@ import RadixSelect, {
   selectClass,
 } from "@/components/RadixSelect";
 import SelectInput from "@/components/SelectInput";
+import { useState } from "react";
 import { v4 } from "uuid";
 
 export default function Home() {
+  const [selected, setSelected] = useState<string[]>([]);
   return (
     <section className="section">
       <div className="flex justify-center mb-[30px]">
@@ -113,6 +115,16 @@ export default function Home() {
             <CourseCard
               key={v4()}
               {...course}
+              onDelete={() => {
+                setSelected((prev) => prev?.filter((it) => it !== course?.id));
+              }}
+              onAddToList={() => {
+                if (course?.id) {
+                  console.log("ey");
+                  setSelected((prev) => [...prev, course?.id as string]);
+                }
+              }}
+              inList={selected?.includes(course?.id || "")}
               viewLink={`/courses/${course?.title}`}
             />
           ))}
