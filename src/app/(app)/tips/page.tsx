@@ -10,7 +10,6 @@ import RadixSelect, {
   SelectSeperator,
   selectClass,
 } from "@/components/RadixSelect";
-import SelectInput from "@/components/SelectInput";
 import { useState } from "react";
 import { v4 } from "uuid";
 
